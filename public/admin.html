@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin-Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Einbinden der XLSX-Bibliothek -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+  <div class="admin-container">
+    <h1>Berichtsverwaltung</h1>
+    <ul id="report-list"></ul>
+  </div>
+
+  <h1>Admin Dashboard</h1>
+  <!-- Button zum Exportieren von Berichten -->
+  <button id="exportButton">Exportiere Berichte nach Excel</button>
+
+  <!-- Einbinden der Admin-Logik -->
+  <script src="admin.js"></script>
+</body>
+</html>

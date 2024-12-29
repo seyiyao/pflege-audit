@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Anmeldung</h1>
+    <form id="login-form">
+      <label for="username">Benutzername:</label>
+      <input type="text" id="username" required>
+      <label for="password">Passwort:</label>
+      <input type="password" id="password" required>
+      <button type="submit">Einloggen</button>
+    </form>
+    <p id="error-message" style="display: none;">Ungültige Anmeldedaten.</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

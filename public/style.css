@@ -1,0 +1,144 @@
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Überschrift */
+  h1 {
+    color: #4a148c;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Bereichstitel */
+  .checklist-section h2 {
+    color: #ffffff;
+    background-color: #6a1b9a;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: bold; /* Fett */
+  }
+  
+  /* Fragenüberschriften */
+  .subsection h3 {
+    color: #6a1b9a;
+    border-left: 5px solid #6a1b9a;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    font-weight: bold; /* Fett */
+  }
+  
+  /* Frage-Label */
+  .question label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold; /* Fett nur für Fragen */
+  }
+  
+  /* Abstand zwischen Fragen */
+  .question {
+    margin-bottom: 20px; /* Abstand zwischen Fragen */
+  }
+  
+  /* Radio-Buttons */
+  .options label {
+    display: block;
+    margin: 5px 0;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #ffffff;
+    transition: background-color 0.3s, border-color 0.3s;
+    cursor: pointer;
+    font-weight: normal; /* Kein Fett für Antwortmöglichkeiten */
+  }
+  
+  .options label:hover {
+    background-color: #ede7f6;
+    border-color: #6a1b9a;
+  }
+  
+  .options input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  /* Kommentarbereich */
+  .comment label {
+    font-size: 14px;
+    color: #6a1b9a;
+    margin-top: 15px;
+    display: block;
+  }
+  
+  .comment textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+    font-size: 14px;
+    font-family: inherit;
+    background-color: #fff;
+  }
+  
+  /* Buttons */
+  .navigation-buttons button {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #6a1b9a;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .navigation-buttons button:hover {
+    background-color: #4a148c;
+  }
+  
+  .navigation-buttons button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  #submit-btn {
+    background-color: #00796b;
+  }
+  
+  #submit-btn:hover {
+    background-color: #004d40;
+  }
+  
+  /* Globale Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1 {
+    color: #4A148C;
+    text-align: center;
+}
+
+button {
+    background-color: #4A148C;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}

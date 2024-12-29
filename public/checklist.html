@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audit-Checkliste</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    const role = localStorage.getItem('role');
+    if (role !== 'user' && role !== 'admin') {
+      alert('Zugriff verweigert!');
+      window.location.href = 'index.html';
+    }
+  </script>
+  
+</head>
+<body>
+  <div class="container">
+    <h1>Audit-Checkliste</h1>
+
+    <form id="audit-form">
+      <!-- Bereich 1 -->
+      <section class="checklist-section" id="section-1">
+        <h2>Bereich 1: Unterstützung bei der Mobilität und Selbstversorgung</h2>
+
+        <!-- Subbereich 1.1 -->
+        <div class="subsection">
+          <h3>1.1. Unterstützung im Bereich der Mobilität</h3>
+          <div class="question">
+            <label>1.1.1. Wird eine individuelle Einschätzung des Mobilitätsbedarfs jedes Bewohners regelmäßig durchgeführt?</label>
+            <div class="options">
+              <label><input type="radio" name="q1-1-1" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-1-1" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-1-1" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-1-1" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label>1.1.2. Sind Mobilitätshilfen (Rollatoren, Rollstühle) in einwandfreiem Zustand und für den Bewohner zugänglich?</label>
+            <div class="options">
+              <label><input type="radio" name="q1-1-2" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-1-2" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-1-2" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-1-2" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label>1.1.3 Wird die Mobilität aktiv gefördert, z. B. durch Gehübungen oder Physiotherapie?</label>
+            <div class="options">
+              <label><input type="radio" name="q1-1-3" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-1-3" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-1-3" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-1-3" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label>1.1.4. Gibt es Dokumentationen über Sturzrisikoanalysen und entsprechende Maßnahmen?</label>
+            <div class="options">
+              <label><input type="radio" name="q1-1-4" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-1-4" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-1-4" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-1-4" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="comment">
+            <label>Kommentar zu 1.1. Unterstützung im Bereich der Mobilität:</label>
+            <textarea name="comment1-1"></textarea>
+          </div>
+        </div>
+
+
+        <div class="subsection">
+          <h3>1.2. Unterstützung beim Essen und Trinken  </h3>
+          <div class="question">
+            <label>1.2.1. Sind die Essenspläne an die individuellen Bedürfnisse und Vorlieben der Bewohner angepasst (z. B. Diät, Konsistenz)? </label>
+            <div class="options">
+              <label><input type="radio" name="q1-2-1" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-2-1" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-2-1" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-2-1" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label>1.2.2. Werden Bewohner aktiv unterstützt, wenn sie Schwierigkeiten beim Essen und Trinken haben (z. B. Hilfsmittel, Handreichungen)?  </label>
+            <div class="options">
+              <label><input type="radio" name="q1-2-2" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-2-2" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-2-2" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-2-2" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label>1.2.3. Gibt es eine regelmäßige Überprüfung des Ernährungs- und Flüssigkeitsstatus?  </label>
+            <div class="options">
+              <label><input type="radio" name="q1-1-3" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-1-3" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-1-3" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-1-3" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label> 1.2.4. Sind Auffälligkeiten (z. B. ungewollter Gewichtsverlust) dokumentiert und werden Maßnahmen ergriffen?</label>
+            <div class="options">
+              <label><input type="radio" name="q1-2-4" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-2-4" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-2-4" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-2-4" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+
+
+          <div class="comment">
+            <label>Kommentar zu 1.2. Unterstützung beim Essen und Trinken           </label>
+            <textarea name="comment1-1"></textarea>
+          </div>
+        </div>
+
+
+        <div class="subsection">
+          <h3>1.3. Unterstützung bei Kontinenzverlust, Kontinenzförderung </h3>
+          <div class="question">
+            <label> 1.3.1. Liegen individuelle Kontinenzpläne vor, die regelmäßig überprüft und angepasst werden?</label>
+            <div class="options">
+              <label><input type="radio" name="q1-3-1" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-3-1" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-3-1" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-3-1" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label> 1.3.2. Werden Hilfsmittel zur Kontinenzförderung bedarfsgerecht eingesetzt?</label>
+            <div class="options">
+              <label><input type="radio" name="q1-3-2" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-3-2" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-3-2" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-3-2" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label> 1.3.3. Sind Maßnahmen zur Hautpflege bei Bewohnern mit Inkontinenz dokumentiert und nachvollziehbar?</label>
+            <div class="options">
+              <label><input type="radio" name="q1-3-3" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-3-3" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-3-3" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-3-3" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label>1.3.4. Gibt es evidenzbasierte Schulungen des Personals zur Kontinenzförderung? </label>
+            <div class="options">
+              <label><input type="radio" name="q1-3-4" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-3-4" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-3-4" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-3-4" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="comment">
+            <label> Kommentar zu 1.3. Unterstützung bei Kontinenzverlust, Kontinenzförderung</label>
+            <textarea name="comment1-1"></textarea>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>1.4. Unterstützung bei der Körperpflege </h3>
+          <div class="question">
+            <label>1.4.1. Werden individuelle Wünsche und Gewohnheiten der Bewohner bei der Körperpflege berücksichtigt? </label>
+            <div class="options">
+              <label><input type="radio" name="q1-4-1" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-4-1" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-4-1" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-4-1" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label> 1.4.2. Ist die Pflegeausstattung vollständig und funktionsfähig (z. B. Handtücher, Waschlappen)?</label>
+            <div class="options">
+              <label><input type="radio" name="q1-4-2" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-4-2" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-4-2" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-4-2" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label>1.4.3. Gibt es Nachweise für regelmäßige Hautkontrollen und Maßnahmen bei Auffälligkeiten (z. B. Dekubitusprophylaxe)? </label>
+            <div class="options">
+              <label><input type="radio" name="q1-4-3" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-4-3" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-4-3" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-4-3" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label>1.4.4. Sind Pflegemaßnahmen vollständig und zeitnah dokumentiert? </label>
+            <div class="options">
+              <label><input type="radio" name="q1-4-4" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-4-4" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-4-4" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q1-4-4" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="comment">
+            <label>Kommentar zu 1.4. Unterstützung bei der Körperpflege </label>
+            <textarea name="comment1-1"></textarea>
+          </div>
+        </div>
+
+        <!-- Füge weitere Subbereiche und Fragen hinzu... -->
+      </section>
+
+      <!-- Bereich 2 -->
+      <section class="checklist-section" id="section-2" style="display: none;">
+        <h2>Bereich 2: Unterstützung bei krankheits- und therapiebedingten Anforderungen und Belastungen</h2>
+        <!-- Füge die Fragen für Bereich 2 hier ein -->
+        <div class="subsection">
+          <h3>2.1. Unterstützung bei der Medikamenteneinnahme</h3>
+          <div class="question">
+            <label>2.1.1. Werden Medikamente gemäß ärztlicher Verordnung korrekt gelagert und verabreicht? </label>
+            <div class="options">
+              <label><input type="radio" name="q2-1-1" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-1-1" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-1-1" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-1-1" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label> 2.1.2. Gibt es Nachweise für eine regelmäßige Medikamentenkontrolle (z. B. Ablaufdaten, Nebenwirkungen)?</label>
+            <div class="options">
+              <label><input type="radio" name="q2-1-2" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-1-2" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-1-2" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-1-2" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label>2.1.3. Sind Abweichungen oder Medikationsfehler dokumentiert und analysiert?</label>
+            <div class="options">
+              <label><input type="radio" name="q2-1-3" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-1-3" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-1-3" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-1-3" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+   
+          <div class="comment">
+            <label>Kommentar zu 2.1. Unterstützung bei der Medikamentenaufnahme </label>
+            <textarea name="comment1-1"></textarea>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>2.2. Schmerzmanagement  </h3>
+          <div class="question">
+            <label>2.2.1. Werden regelmäßige Schmerzbewertungen durchgeführt und dokumentiert? </label>
+            <div class="options">
+              <label><input type="radio" name="q2-2-1" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-2-1" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-2-1" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-2-1" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label> 2.2.2. Sind Schmerztherapien individuell angepasst und wirksam umgesetzt?</label>
+            <div class="options">
+              <label><input type="radio" name="q2-2-2" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-2-2" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-2-2" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-2-2" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label>2.2.3. Gibt es Schulungen für das Personal zum Umgang mit Schmerzpatienten? </label>
+            <div class="options">
+              <label><input type="radio" name="q2-2-3" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-2-3" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-2-3" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-2-3" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+   
+          <div class="comment">
+            <label>Kommentar zu 2.2. Schmerzmanagement </label>
+            <textarea name="comment1-1"></textarea>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>2.3. Wundversorgung  </h3>
+          <div class="question">
+            <label>2.3.1. Liegt eine dokumentierte Wunddokumentation vor, die den aktuellen Zustand und Maßnahmen beschreibt?</label>
+            <div class="options">
+              <label><input type="radio" name="q2-3-1" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-3-1" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-3-1" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-3-1" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label> 2.3.2. Werden evidenzbasierte Methoden der Wundversorgung angewandt?</label>
+            <div class="options">
+              <label><input type="radio" name="q2-3-2" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-3-2" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-3-2" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-3-2" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label>2.3.3. Ist Material für die Wundversorgung ausreichend vorhanden und korrekt gelagert? </label>
+            <div class="options">
+              <label><input type="radio" name="q2-3-3" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-3-3" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-3-3" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-3-3" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+   
+          <div class="comment">
+            <label>Kommentar zu 2.3. Wundversorgung </label>
+            <textarea name="comment1-1"></textarea>
+          </div>
+        </div>
+
+
+        <div class="subsection">
+          <h3>2.4. Unterstützung bei besonderem medizinisch-pflegerischen Bedarf   </h3>
+          <div class="question">
+            <label>2.4.1. Werden Bewohner mit besonderen medizinischen Anforderungen individuell betreut (z. B. Beatmung, Tracheostoma)? </label>
+            <div class="options">
+              <label><input type="radio" name="q2-4-1" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-4-1" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-4-1" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-4-1" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label> 2.4.2. Gibt es Notfallpläne für Bewohner mit speziellen Bedürfnissen?</label>
+            <div class="options">
+              <label><input type="radio" name="q2-4-2" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-4-2" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-4-2" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-4-2" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label>2.4.3. Ist das Pflegepersonal entsprechend geschult? </label>
+            <div class="options">
+              <label><input type="radio" name="q2-4-3" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-4-3" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-4-3" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q2-4-3" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+   
+          <div class="comment">
+            <label>Kommentar zu 2.4. Unterstützung bei besonderem medizinisch-pflegerischen Bedarf </label>
+            <textarea name="comment1-1"></textarea>
+          </div>
+        </div>
+        
+      </section>
+
+      <!-- Bereich 3 -->
+      <section class="checklist-section" id="section-3" style="display: none;">
+        <h2>Bereich 3: Unterstützung bei der Gestaltung des Alltagslebens und der sozialen Kontakte</h2>
+        <!-- Füge die Fragen für Bereich 3 hier ein -->
+        <div class="subsection">
+          <h3>3.1. Unterstützung bei Beeinträchtigung der Sinneswahrnehmung</h3>
+          <div class="question">
+            <label> 3.1.1. Sind Hilfsmittel wie Brillen, Hörgeräte oder Lupen funktionstüchtig und für den Bewohner zugänglich?</label>
+            <div class="options">
+              <label><input type="radio" name="q3-1-1" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q3-1-1" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q3-1-1" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q3-1-1" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label> 3.1.2. Werden Maßnahmen ergriffen, um die Sinneswahrnehmung aktiv zu fördern?</label>
+            <div class="options">
+              <label><input type="radio" name="q3-1-2" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q3-1-2" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q3-1-2" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q3-1-2" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+
+          <div class="comment">
+            <label>Kommentar zu 3.1. Unterstützung bei Beeinträchtigung der Sinneswahrnehmung </label>
+            <textarea name="comment1-1"></textarea>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>3.2. Unterstützung bei der Strukturierung des Tages</h3>
+          <div class="question">
+            <label> 3.2.1. Gibt es einen individuellen Tagesablaufplan für jeden Bewohner?</label>
+            <div class="options">
+              <label><input type="radio" name="q3-2-1" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q3-2-1" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q3-2-1" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q3-2-1" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label> 3.2.2. Werden Aktivitäten angeboten, die den Interessen und Fähigkeiten der Bewohner entsprechen?</label>
+            <div class="options">
+              <label><input type="radio" name="q3-2-2" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q3-2-2" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q3-2-2" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q3-2-2" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label> 3.2.3. Wird die Teilnahme an sozialen Aktivitäten gefördert und dokumentiert?</label>
+            <div class="options">
+              <label><input type="radio" name="q3-2-3" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q3-2-3" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q3-2-3" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q3-2-3" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+
+          <div class="comment">
+            <label>Kommentar zu 3.2. Unterstützung bei der Strukturierung des Tages </label>
+            <textarea name="comment1-1"></textarea>
+          </div>
+        </div>
+
+
+        <div class="subsection">
+          <h3>3.3. Nächtliche Versorgung</h3>
+          <div class="question">
+            <label> 3.3.1. Ist die nächtliche Versorgung entsprechend den Bedürfnissen der Bewohner organisiert? </label>
+            <div class="options">
+              <label><input type="radio" name="q3-3-1" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q3-3-1" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q3-3-1" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q3-3-1" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label>3.3.2. Werden nächtliche Pflegeleistungen (z. B. Umlagerung, Toilettengänge) dokumentiert? </label>
+            <div class="options">
+              <label><input type="radio" name="q3-3-2" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q3-3-2" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q3-3-2" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q3-3-2" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="comment">
+            <label>Kommentar zu 3.3. Nächtliche Versorgung </label>
+            <textarea name="comment1-1"></textarea>
+          </div>
+        </div>
+
+
+
+      </section>
+
+      <!-- Bereich 4 -->
+      <section class="checklist-section" id="section-4" style="display: none;">
+        <h2>Bereich 4: Unterstützung in besonderen Bedarfs- und Versorgungssituationen</h2>
+        <!-- Füge die Fragen für Bereich 4 hier ein -->
+        <div class="subsection">
+          <h3> 4.1. Eingewöhnungsphase nach dem Einzug </h3>
+          <div class="question">
+            <label>4.1.1. Wird ein individueller Eingewöhnungsplan für neue Bewohner erstellt und umgesetzt? </label>
+            <div class="options">
+              <label><input type="radio" name="q4-1-1" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q4-1-1" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q4-1-1" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q4-1-1" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label> 4.1.2. Gibt es eine systematische Aufnahme- und Übergabedokumentation?</label>
+            <div class="options">
+              <label><input type="radio" name="q4-1-2" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q4-1-2" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q4-1-2" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q4-1-2" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="comment">
+            <label>Kommentar zu 4.1. Eingewöhnungsphase nach dem Einzug </label>
+            <textarea name="comment1-1"></textarea>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>4.2. Überleitung bei Krankenhausaufenthalt</h3>
+          <div class="question">
+            <label> 4.2.1. Sind Übergabedokumente (z. B. Pflegebericht) vollständig und rechtzeitig erstellt?</label>
+            <div class="options">
+              <label><input type="radio" name="q4-2-1" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q4-2-1" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q4-2-1" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q4-2-1" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label>4.2.2. Wird die Rückkehr aus dem Krankenhaus aktiv begleitet und dokumentiert?</label>
+            <div class="options">
+              <label><input type="radio" name="q4-2-2" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q4-2-2" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q4-2-2" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q4-2-2" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="comment">
+            <label> Kommentar zu 4.2. Überleitung bei Krankenhausaufenthalt</label>
+            <textarea name="comment1-1"></textarea>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>4.3. Unterstützung von Bewohnern mit herausforderndem Verhalten</h3>
+          <div class="question">
+            <label> 4.3.1. Gibt es individuelle Betreuungspläne und Deeskalationsstrategien?</label>
+            <div class="options">
+              <label><input type="radio" name="q4-3-1" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q4-3-1" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q4-3-1" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q4-3-1" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label> 4.3.2. Ist das Personal im Umgang mit herausforderndem Verhalten geschult?</label>
+            <div class="options">
+              <label><input type="radio" name="q4-3-2" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q4-3-2" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q4-3-2" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q4-3-2" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="comment">
+            <label> Kommentar zu 4.3. Unterstützung von Bewohnern mit herausforderndem Verhalten</label>
+            <textarea name="comment1-1"></textarea>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>4.4. Freiheitsentziehende Maßnahmen </h3>
+          <div class="question">
+            <label>4.4.1. Werden freiheitsentziehende Maßnahmen nur auf Grundlage eines richterlichen Beschlusses angewandt? </label>
+            <div class="options">
+              <label><input type="radio" name="q4-4-1" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q4-4-1" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q4-4-1" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q4-4-1" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label>4.4.2. Sind alle Maßnahmen nachvollziehbar dokumentiert? </label>
+            <div class="options">
+              <label><input type="radio" name="q4-4-2" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q4-4-2" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q4-4-2" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q4-4-2" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="comment">
+            <label>Kommentar zu 4.4. Freiheitsentziehende Maßnahmen </label>
+            <textarea name="comment1-1"></textarea>
+          </div>
+        </div>
+
+      
+      </section>
+
+      <!-- Bereich 5 -->
+      <section class="checklist-section" id="section-5" style="display: none;">
+        <h2>Bereich 5: Begleitung sterbender Bewohner und ihrer Angehörigen</h2>
+        <!-- Füge die Fragen für Bereich 5 hier ein -->
+     
+        <div class="subsection">
+
+          <div class="question">
+            <label>5.1. Liegt ein schriftliches Konzept zur Sterbebegleitung vor? </label>
+            <div class="options">
+              <label><input type="radio" name="q5-1" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q5-1" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q5-1" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q5-1" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label>5.2. Gibt es feste Ansprechpartner für palliative Betreuung und Zusammenarbeit mit Hospizen? </label>
+            <div class="options">
+              <label><input type="radio" name="q5-2" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q5-2" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q5-2" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q5-2" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label> 5.3. Werden Wünsche und Vorstellungen der Bewohner und Angehörigen systematisch erfasst und umgesetzt?</label>
+            <div class="options">
+              <label><input type="radio" name="q5-3" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q5-3" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q5-3" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q5-3" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label>5.4. Sind Patientenverfügungen und Vorsorgevollmachten bekannt und zugänglich? </label>
+            <div class="options">
+              <label><input type="radio" name="q5-4" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q5-4" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q5-4" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q5-4" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label>5.5. Wird der Sterbeprozess sensibel dokumentiert und reflektiert? </label>
+            <div class="options">
+              <label><input type="radio" name="q5-5" value="Keine oder geringe Qualitätsdefizite"> Keine oder geringe Qualitätsdefizite</label>
+              <label><input type="radio" name="q5-5" value="Moderate Qualitätsdefizite"> Moderate Qualitätsdefizite</label>
+              <label><input type="radio" name="q5-5" value="Erhebliche Qualitätsdefizite"> Erhebliche Qualitätsdefizite</label>
+              <label><input type="radio" name="q5-5" value="Schwerwiegende Qualitätsdefizite"> Schwerwiegende Qualitätsdefizite</label>
+            </div>
+          </div>
+
+
+          <div class="comment">
+            <label> Kommentar zu Bereich 5: Begleitung sterbender Bewohner und ihrer Angehörigen</label>
+            <textarea name="comment1-1"></textarea>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Navigation -->
+      <div class="navigation-buttons">
+        <button type="button" id="prev-btn" disabled>Zurück</button>
+        <button type="button" id="next-btn">Weiter</button>
+        <button type="submit" id="submit-btn" style="display: none;">Abschicken</button>
+      </div>
+    </form>
+    
+  </div>
+  <div id="user-reports">
+    <h2>Meine Berichte</h2>
+    <ul id="report-list"></ul>
+  </div>
+
+  <script src="checklist.js"></script>
+</body>
+</html> 
