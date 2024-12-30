@@ -1,144 +1,281 @@
-/* Container */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Überschrift */
-  h1 {
-    color: #4a148c;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  /* Bereichstitel */
-  .checklist-section h2 {
-    color: #ffffff;
-    background-color: #6a1b9a;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    font-weight: bold; /* Fett */
-  }
-  
-  /* Fragenüberschriften */
-  .subsection h3 {
-    color: #6a1b9a;
-    border-left: 5px solid #6a1b9a;
-    padding-left: 10px;
-    margin-bottom: 10px;
-    font-weight: bold; /* Fett */
-  }
-  
-  /* Frage-Label */
-  .question label {
-    font-size: 16px;
-    margin-bottom: 5px;
-    display: block;
-    font-weight: bold; /* Fett nur für Fragen */
-  }
-  
-  /* Abstand zwischen Fragen */
-  .question {
-    margin-bottom: 20px; /* Abstand zwischen Fragen */
-  }
-  
-  /* Radio-Buttons */
-  .options label {
-    display: block;
-    margin: 5px 0;
-    padding: 8px 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #ffffff;
-    transition: background-color 0.3s, border-color 0.3s;
-    cursor: pointer;
-    font-weight: normal; /* Kein Fett für Antwortmöglichkeiten */
-  }
-  
-  .options label:hover {
-    background-color: #ede7f6;
-    border-color: #6a1b9a;
-  }
-  
-  .options input[type="radio"] {
-    margin-right: 10px;
-  }
-  
-  /* Kommentarbereich */
-  .comment label {
-    font-size: 14px;
-    color: #6a1b9a;
-    margin-top: 15px;
-    display: block;
-  }
-  
-  .comment textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    resize: vertical;
-    font-size: 14px;
-    font-family: inherit;
-    background-color: #fff;
-  }
-  
-  /* Buttons */
-  .navigation-buttons button {
-    padding: 10px 20px;
-    margin: 10px 5px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #ffffff;
-    background-color: #6a1b9a;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .navigation-buttons button:hover {
-    background-color: #4a148c;
-  }
-  
-  .navigation-buttons button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
-  #submit-btn {
-    background-color: #00796b;
-  }
-  
-  #submit-btn:hover {
-    background-color: #004d40;
-  }
-  
-  /* Globale Styles */
+/* Allgemeine Stile */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-    color: #333;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
 }
 
 h1 {
-    color: #4A148C;
-    text-align: center;
+  color: #4A148C;
+  text-align: center; /* Zentriere den Titel */
+  margin-bottom: 30px;
+  font-size: 26px;
 }
 
-button {
-    background-color: #4A148C;
-    color: white;
-    border: none;
-    padding: 10px;
-    margin: 5px;
-    cursor: pointer;
+h2 {
+  color: #4A148C;
+  text-align: center;
+  margin-bottom: 20px;
 }
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  height: 60px;
+  margin-right: 20px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+}
+
+.title h1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4A148C;
+  margin: 0;
+}
+
+.title p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Admin-Container */
+.admin-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.report-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.report-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.report-info {
+  flex: 2;
+  font-size: 14px;
+  font-weight: bold;
+  color: #4A148C;
+}
+
+.report-actions {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Buttons */
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button.export-excel {
+  background-color: #00796B;
+  color: white;
+}
+
+button.export-pdf {
+  background-color: #6A1B9A;
+  color: white;
+}
+
+button.delete-button {
+  background-color: #D32F2F;
+  color: white;
+}
+
+button.delete-button:hover {
+  background-color: #B71C1C;
+}
+
+/* === User-Checkliste Styles === */
+
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Bereich-Header */
+.checklist-section {
+  margin-bottom: 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.checklist-section h2 {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 18px;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.question label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.options {
+  margin-left: 20px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.options label {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-size: 14px;
+  resize: vertical;
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.navigation-buttons button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.navigation-buttons button:hover {
+  background-color: #45A049;
+}
+
+/* Kommentare */
+.comment {
+  margin-top: 20px;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* === Responsive Design === */
+
+/* Mobile Geräte */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .checklist-section {
+    padding: 15px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    max-width: 700px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .checklist-section h2 {
+    font-size: 16px;
+  }
+}
+.logout-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #007BFF; /* Blau */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #0056b3; /* Dunkleres Blau */
+}
+

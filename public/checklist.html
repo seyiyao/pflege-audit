@@ -8,10 +8,11 @@
   <script>
     const role = localStorage.getItem('role');
     if (role !== 'user' && role !== 'admin') {
-      alert('Zugriff verweigert!');
-      window.location.href = 'index.html';
+        alert('Zugriff verweigert! Sie werden zurückgeleitet.');
+        window.location.href = 'index.html';
     }
-  </script>
+</script>
+
   
 </head>
 <body>
@@ -684,10 +685,6 @@
       </div>
     </form>
     
-  </div>
-  <div id="user-reports">
-    <h2>Meine Berichte</h2>
-    <ul id="report-list"></ul>
   </div>
 
   <script src="checklist.js"></script>

@@ -59,7 +59,7 @@ function updateSectionVisibility() {
     submitBtn.style.display = currentSectionIndex === sections.length - 1 ? 'inline-block' : 'none';
 
     // Direkt zum oberen Bereich der Seite springen
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.querySelector('.container').scrollIntoView({ block: 'start', behavior: 'instant' });
 }
 
 // Event-Listener für "Zurück"-Button

@@ -1,0 +1,3 @@
+# .gitignore Datei
+.env
+node_modules/

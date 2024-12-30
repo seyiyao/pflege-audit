@@ -1,8 +1,9 @@
 document.getElementById('login-form').addEventListener('submit', async (event) => {
-    event.preventDefault(); // Standard-Formular-Aktion verhindern
+    event.preventDefault();
 
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
+    const errorMessage = document.getElementById('error-message');
 
     try {
         const response = await fetch('http://localhost:3000/api/login', {
@@ -13,18 +14,17 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
 
         if (response.ok) {
             const data = await response.json();
-            alert('Login erfolgreich!');
-            // Weiterleitung basierend auf der Rolle
+            localStorage.setItem('role', data.role); // Rolle speichern
             if (data.role === 'admin') {
                 window.location.href = '/admin.html';
             } else if (data.role === 'user') {
                 window.location.href = '/checklist.html';
             }
         } else {
-            alert('Ungültige Anmeldedaten!');
+            throw new Error('Ungültige Anmeldedaten!');
         }
     } catch (error) {
-        console.error('Fehler beim Login:', error);
-        alert('Ein Fehler ist aufgetreten.');
+        errorMessage.style.display = 'block';
+        errorMessage.textContent = error.message;
     }
 });

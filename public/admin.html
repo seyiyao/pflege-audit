@@ -5,20 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin-Dashboard</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Einbinden der XLSX-Bibliothek -->
+  <!-- Einbinden der XLSX- und jsPDF-Bibliotheken -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+
+  <script>
+    const role = localStorage.getItem('role');
+    if (role !== 'admin') {
+        alert('Zugriff verweigert! Sie werden zurückgeleitet.');
+        window.location.href = 'index.html';
+    }
+</script>
 </head>
 <body>
+
+
   <div class="admin-container">
     <h1>Berichtsverwaltung</h1>
-    <ul id="report-list"></ul>
+    <ul id="report-list" class="report-list"></ul>
   </div>
+  <div class="header">
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+    </div>
+    
+    <button id="logout-button" class="logout-btn">Abmelden</button>
+  </div>
+  
 
-  <h1>Admin Dashboard</h1>
-  <!-- Button zum Exportieren von Berichten -->
-  <button id="exportButton">Exportiere Berichte nach Excel</button>
-
-  <!-- Einbinden der Admin-Logik -->
   <script src="admin.js"></script>
 </body>
 </html>
