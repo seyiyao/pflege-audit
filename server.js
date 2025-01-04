@@ -208,9 +208,7 @@ app.use((req, res, next) => {
 
 
 // Server starten
-const os = require('os');
-
-const ipAddress = '192.168.178.64'; // Statische IP-Adresse deines Geräts
-app.listen(PORT, ipAddress, () => {
-    console.log(`Server läuft auf http://${ipAddress}:${PORT}`);
+app.listen(PORT, () => {
+    console.log(`Server läuft auf Port ${PORT}`);
 });
+
