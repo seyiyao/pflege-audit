@@ -6,7 +6,7 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
     const errorMessage = document.getElementById('error-message');
 
     try {
-        const response = await fetch('http://localhost:3000/api/login', {
+        const response = await fetch('http://192.168.178.64:3000/api/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username, password })
@@ -14,14 +14,16 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
 
         if (response.ok) {
             const data = await response.json();
-            localStorage.setItem('role', data.role); // Rolle speichern
+            localStorage.setItem('role', data.role); // Speichere die Rolle
+            localStorage.setItem('username', username); // Speichere den Benutzernamen
             if (data.role === 'admin') {
-                window.location.href = '/admin.html';
+                window.location.href = '/admin.html'; // Weiterleitung für Admin
             } else if (data.role === 'user') {
-                window.location.href = '/checklist.html';
+                window.location.href = '/bereich.html'; // Weiterleitung zur Wohnbereichsauswahl
             }
         } else {
-            throw new Error('Ungültige Anmeldedaten!');
+            const errorData = await response.json();
+            throw new Error(errorData.message || 'Unbekannter Fehler');
         }
     } catch (error) {
         errorMessage.style.display = 'block';

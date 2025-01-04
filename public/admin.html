@@ -5,34 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin-Dashboard</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Einbinden der XLSX- und jsPDF-Bibliotheken -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
-
   <script>
     const role = localStorage.getItem('role');
     if (role !== 'admin') {
         alert('Zugriff verweigert! Sie werden zurückgeleitet.');
         window.location.href = 'index.html';
     }
-</script>
+  </script>
 </head>
 <body>
-
-
-  <div class="admin-container">
-    <h1>Berichtsverwaltung</h1>
-    <ul id="report-list" class="report-list"></ul>
-  </div>
+  <!-- Header-Bereich -->
   <div class="header">
-    <div class="logo">
-      <img src="logo.png" alt="Logo">
-    </div>
-    
     <button id="logout-button" class="logout-btn">Abmelden</button>
   </div>
-  
+
+  <!-- Hauptcontainer -->
+  <div class="admin-container">
+    <!-- Überschrift -->
+    <h1>Berichtsverwaltung</h1>
+
+    <!-- Export-Buttons -->
+    <div class="export-buttons">
+      <button id="export-all" class="export-all-excel-btn">Alle Berichte (Excel) exportieren</button>
+
+      <button id="export-all-pdf" class="export-all-pdf-btn">Alle Berichte (PDF) exportieren</button>
+    </div>
+
+    <!-- Auflistung der Berichte -->
+    <ul id="report-list" class="report-list"></ul>
+  </div>
 
   <script src="admin.js"></script>
 </body>

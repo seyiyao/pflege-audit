@@ -18,7 +18,14 @@
 <body>
   <div class="container">
     <h1>Audit-Checkliste</h1>
-
+    <div class="report-metadata">
+      <label for="resident-name">Name des Bewohners:</label>
+      <input type="text" id="resident-name" name="resident-name" placeholder="Name des Bewohners" required>
+    
+      <label for="recorder-name">Name des Erfassers:</label>
+      <input type="text" id="recorder-name" name="recorder-name" placeholder="Name des Erfassers" required>
+    </div>
+    
     <form id="audit-form">
       <!-- Bereich 1 -->
       <section class="checklist-section" id="section-1">
@@ -686,6 +693,20 @@
     </form>
     
   </div>
+
+  <div>
+    <label>Name des Erfassers:</label>
+    <input type="text" id="erfasser-name" readonly>
+</div>
+<div>
+    <label>Wohnbereich:</label>
+    <input type="text" id="wohn-bereich" readonly>
+</div>
+
+<script>
+    document.getElementById('erfasser-name').value = localStorage.getItem('username') || 'Unbekannt';
+    document.getElementById('wohn-bereich').value = localStorage.getItem('wohnBereich') || 'Unbekannt';
+</script>
 
   <script src="checklist.js"></script>
 </body>

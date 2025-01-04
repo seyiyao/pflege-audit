@@ -279,3 +279,41 @@ textarea {
   background-color: #0056b3; /* Dunkleres Blau */
 }
 
+.export-all-pdf-btn {
+    background-color: purple;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.export-all-pdf-btn:hover {
+    background-color: darkviolet;
+}
+
+.export-buttons {
+  display: flex;
+  justify-content: center; /* Buttons zentrieren */
+  gap: 20px; /* Abstand zwischen den Buttons */
+  margin-bottom: 20px; /* Abstand zur Berichtsauflistung */
+}
+
+
+.export-all-excel-btn {
+  background-color: #00796B; /* Grüner Hintergrund */
+  color: white; /* Weißer Text */
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px; /* Runde Ecken */
+  transition: background-color 0.3s ease;
+}
+
+.export-all-excel-btn:hover {
+  background-color: #00796B; /* Etwas dunkleres Grün beim Hover */
+}
+

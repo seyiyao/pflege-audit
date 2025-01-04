@@ -72,22 +72,6 @@
     }
   },
   {
-    "id": "R-1735422981861",
-    "name": "Unbekannter Nutzer",
-    "date": "2024-12-28T21:56:21.861Z",
-    "answers": {
-      "comment1-1": ""
-    }
-  },
-  {
-    "id": "R-1735423389053",
-    "name": "Unbekannter Nutzer",
-    "date": "2024-12-28T22:03:09.053Z",
-    "answers": {
-      "comment1-1": ""
-    }
-  },
-  {
     "id": "R-1735509866849",
     "name": "Unbekannter Nutzer",
     "date": "2024-12-29T22:04:26.849Z",
@@ -211,6 +195,217 @@
     "answers": {
       "comment1-1": "ert",
       "q2-1-2": "Erhebliche Qualitätsdefizite"
+    }
+  },
+  {
+    "id": "R-1735565108944",
+    "name": "Unbekannter Nutzer",
+    "date": "Montag, 30. Dezember 2024 um 14:25:09 MEZ",
+    "answers": {
+      "comment1-1": ""
+    }
+  },
+  {
+    "id": "R-1735660137087",
+    "name": "Unbekannter Nutzer",
+    "date": "Dienstag, 31. Dezember 2024 um 16:48:57 MEZ",
+    "answers": {
+      "q1-1-1": "Schwerwiegende Qualitätsdefizite",
+      "q1-1-2": "Moderate Qualitätsdefizite",
+      "q1-1-3": "Schwerwiegende Qualitätsdefizite",
+      "q1-1-4": "Schwerwiegende Qualitätsdefizite",
+      "comment1-1": "",
+      "q1-2-1": "Schwerwiegende Qualitätsdefizite",
+      "q1-2-2": "Erhebliche Qualitätsdefizite",
+      "q2-1-1": "Erhebliche Qualitätsdefizite",
+      "q2-3-1": "Schwerwiegende Qualitätsdefizite",
+      "q2-3-2": "Erhebliche Qualitätsdefizite",
+      "q2-3-3": "Moderate Qualitätsdefizite",
+      "q3-1-2": "Keine oder geringe Qualitätsdefizite",
+      "q3-2-3": "Moderate Qualitätsdefizite",
+      "q4-2-1": "Moderate Qualitätsdefizite",
+      "q4-4-2": "Moderate Qualitätsdefizite",
+      "q5-1": "Erhebliche Qualitätsdefizite",
+      "q5-2": "Schwerwiegende Qualitätsdefizite",
+      "q5-4": "Moderate Qualitätsdefizite"
+    }
+  },
+  {
+    "id": "R-1735667879350",
+    "name": "Unbekannter Nutzer",
+    "date": "Dienstag, 31. Dezember 2024 um 18:57:59 MEZ",
+    "answers": {
+      "q1-1-1": "Keine oder geringe Qualitätsdefizite",
+      "comment1-1": ""
+    }
+  },
+  {
+    "id": "R-1735682771267",
+    "name": "Unbekannter Nutzer",
+    "date": "Dienstag, 31. Dezember 2024 um 23:06:11 MEZ",
+    "answers": {
+      "comment1-1": ""
+    }
+  },
+  {
+    "id": "R-1735691203790",
+    "name": "Unbekannter Nutzer",
+    "date": "Mittwoch, 1. Januar 2025 um 01:26:43 MEZ",
+    "answers": {
+      "comment1-1": ""
+    }
+  },
+  {
+    "id": "R-1735692152905",
+    "erfasser": "user",
+    "wohnBereich": "Am Schloßpark",
+    "date": "2025-01-01T00:42:32.905Z",
+    "answers": {
+      "comment1-1": ""
+    }
+  },
+  {
+    "id": "R-1735692271332",
+    "erfasser": "user",
+    "wohnBereich": "Am Schloßpark",
+    "date": "2025-01-01T00:44:31.332Z",
+    "answers": {
+      "comment1-1": ""
+    }
+  },
+  {
+    "id": "R-1735692792716",
+    "erfasser": "user",
+    "wohnBereich": "Am Schloßpark",
+    "date": "2025-01-01T00:53:12.716Z",
+    "answers": {
+      "comment1-1": ""
+    }
+  },
+  {
+    "id": "R-1735693004437",
+    "erfasser": "user",
+    "wohnBereich": "Am Schloßpark",
+    "date": "2025-01-01T00:56:44.437Z",
+    "answers": {
+      "comment1-1": ""
+    }
+  },
+  {
+    "id": "R-1735693217201",
+    "erfasser": "user",
+    "wohnBereich": "Am Schloßpark",
+    "date": "2025-01-01T01:00:17.201Z",
+    "answers": {
+      "comment1-1": ""
+    }
+  },
+  {
+    "id": "R-1735811232869",
+    "erfasser": "user",
+    "wohnBereich": "Am Schloßpark",
+    "date": "2025-01-02T09:47:12.869Z",
+    "answers": {
+      "comment1-1": ""
+    }
+  },
+  {
+    "id": "R-1735811651393",
+    "erfasser": "Unbekannter Nutzer",
+    "wohnBereich": "Am Rheinufer",
+    "date": "2025-01-02T09:54:11.394Z",
+    "answers": {
+      "comment1-1": ""
+    }
+  },
+  {
+    "id": "R-1735812137379",
+    "erfasser": "Unbekannter Nutzer",
+    "wohnBereich": "Unbekannt",
+    "date": "2025-01-02T10:02:17.379Z",
+    "answers": {
+      "comment1-1": ""
+    }
+  },
+  {
+    "id": "R-1735812215652",
+    "erfasser": "Unbekannter Nutzer",
+    "wohnBereich": "An den Seen",
+    "date": "2025-01-02T10:03:35.652Z",
+    "answers": {
+      "comment1-1": ""
+    }
+  },
+  {
+    "id": "R-1735815656447",
+    "erfasser": "Unbekannter Nutzer",
+    "wohnBereich": "An den Seen",
+    "date": "2025-01-02T11:00:56.447Z",
+    "answers": {
+      "comment1-1": ""
+    }
+  },
+  {
+    "id": "R-1735816102753",
+    "erfasser": "Unbekannter Nutzer",
+    "wohnBereich": "Am Rheinufer",
+    "date": "2025-01-02T11:08:22.753Z",
+    "answers": {
+      "comment1-1": ""
+    }
+  },
+  {
+    "id": "R-1735834383064",
+    "erfasser": "user",
+    "wohnBereich": "An den Seen",
+    "date": "2025-01-02T16:13:03.064Z",
+    "answers": {
+      "comment1-1": ""
+    }
+  },
+  {
+    "id": "R-1735836911428",
+    "erfasser": "user",
+    "wohnBereich": "Am Rheinufer",
+    "date": "2025-01-02T16:55:11.428Z",
+    "answers": {
+      "comment1-1": ""
+    }
+  },
+  {
+    "id": "R-1735846760104",
+    "erfasser": "user",
+    "wohnBereich": "Am Ebertpark",
+    "date": "2025-01-02T19:39:20.104Z",
+    "answers": {
+      "comment1-1": ""
+    }
+  },
+  {
+    "id": "R-1735847201697",
+    "erfasser": "user",
+    "wohnBereich": "Am Rheinufer",
+    "date": "2025-01-02T19:46:41.697Z",
+    "answers": {
+      "comment1-1": ""
+    }
+  },
+  {
+    "id": "R-1735851807812",
+    "erfasser": "user",
+    "wohnBereich": "An den Seen",
+    "date": "2025-01-02T21:03:27.812Z",
+    "answers": {
+      "comment1-1": ""
+    }
+  },
+  {
+    "id": "R-1735858849247",
+    "erfasser": "user",
+    "wohnBereich": "Am Rheinufer",
+    "date": "2025-01-02T23:00:49.247Z",
+    "answers": {
+      "comment1-1": ""
     }
   }
 ]
