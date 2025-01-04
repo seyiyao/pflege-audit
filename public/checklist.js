@@ -20,11 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // Bericht an API senden
-            const response = await fetch('http://192.168.178.64:3000/api/reports', {
+            const response = await fetch('https://pflege-audit.onrender.com/api/reports', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(report)
             });
+          
 
             if (!response.ok) {
                 throw new Error('Fehler beim Speichern.');
