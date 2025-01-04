@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Bericht erfolgreich gespeichert!');
             localStorage.removeItem('wohnBereich');
             localStorage.removeItem('username');
-            window.location.href = '/option.html'; // Zur Optionen-Seite weiterleiten
+            window.location.href = 'https://pflege-audit.onrender.com/option.html'; // Zur Optionen-Seite weiterleiten
         } catch (error) {
             console.error('Fehler beim Speichern des Berichts:', error);
             alert('Speichern fehlgeschlagen.');

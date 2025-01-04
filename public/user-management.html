@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutzerverwaltung</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        table th {
+            background: #f4f4f4;
+            color: #333;
+        }
+        .form-section {
+            margin-top: 20px;
+        }
+        .form-section input, .form-section select, .form-section button {
+            padding: 10px;
+            margin: 5px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            width: auto;
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn-danger {
+            background-color: #f44336;
+        }
+        .btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Nutzerverwaltung</h1>
+        <!-- Nutzer-Liste -->
+        <table id="user-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Benutzername</th>
+                    <th>Rolle</th>
+                    <th>Aktionen</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dynamisch generierte Nutzer -->
+            </tbody>
+        </table>
+
+        <!-- Formular zum Hinzufügen neuer Nutzer -->
+        <div class="form-section">
+            <h3>Neuen Nutzer hinzufügen</h3>
+            <form id="add-user-form">
+                <input type="text" id="new-username" placeholder="Benutzername" required>
+                <input type="password" id="new-password" placeholder="Passwort" required>
+                <select id="new-role" required>
+                    <option value="user">Benutzer</option>
+                    <option value="admin">Administrator</option>
+                </select>
+                <button type="submit" class="btn">Hinzufügen</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="user-management.js"></script>
+</body>
+</html>

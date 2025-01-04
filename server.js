@@ -31,6 +31,7 @@ db.serialize(() => {
     `, (err) => {
         if (err) {
             console.error('Fehler beim Erstellen der Benutzer-Tabelle:', err.message);
+            process.exit(1); // Beende den Prozess bei kritischem Fehler
         } else {
             console.log('Benutzer-Tabelle erstellt oder existiert bereits!');
         }
@@ -45,6 +46,23 @@ db.serialize(() => {
             console.error('Fehler beim Einfügen der Beispielbenutzer:', err.message);
         } else {
             console.log('Beispielbenutzer hinzugefügt.');
+        }
+    });
+
+    // Tabelle "password_history" erstellen
+    db.run(`
+        CREATE TABLE IF NOT EXISTS password_history (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_id INTEGER NOT NULL,
+            old_password TEXT NOT NULL,
+            changed_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+            FOREIGN KEY (user_id) REFERENCES users(id)
+        )
+    `, (err) => {
+        if (err) {
+            console.error('Fehler beim Erstellen der Passwort-Historie-Tabelle:', err.message);
+        } else {
+            console.log('Passwort-Historie-Tabelle erstellt oder existiert bereits!');
         }
     });
 
@@ -66,6 +84,7 @@ db.serialize(() => {
     });
 });
 
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -78,6 +97,104 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'login.html'));
 });
+
+app.post('/api/users', (req, res) => {
+    const { username, password, role } = req.body;
+
+    if (!username || !password || !role) {
+        return res.status(400).json({ message: 'Benutzername, Passwort und Rolle sind erforderlich!' });
+    }
+
+    const query = `
+        INSERT INTO users (username, password, role)
+        VALUES (?, ?, ?)
+    `;
+    db.run(query, [username, password, role], function (err) {
+        if (err) {
+            console.error('Fehler beim Erstellen des Nutzers:', err.message);
+            return res.status(500).json({ message: 'Fehler beim Erstellen des Nutzers.' });
+        }
+
+        res.status(201).json({ message: 'Nutzer erfolgreich erstellt!', id: this.lastID });
+    });
+});
+
+app.get('/api/users', (req, res) => {
+    const query = 'SELECT id, username, role FROM users';
+    db.all(query, [], (err, rows) => {
+        if (err) {
+            console.error('Fehler beim Abrufen der Nutzer:', err.message);
+            return res.status(500).json({ message: 'Fehler beim Abrufen der Nutzer.' });
+        }
+
+        res.json(rows);
+    });
+});
+
+app.delete('/api/users/:id', (req, res) => {
+    const { id } = req.params;
+
+    const query = 'DELETE FROM users WHERE id = ?';
+    db.run(query, [id], function (err) {
+        if (err) {
+            console.error('Fehler beim Löschen des Nutzers:', err.message);
+            return res.status(500).json({ message: 'Fehler beim Löschen des Nutzers.' });
+        }
+
+        if (this.changes === 0) {
+            return res.status(404).json({ message: 'Nutzer nicht gefunden.' });
+        }
+
+        res.status(200).json({ message: 'Nutzer erfolgreich gelöscht.' });
+    });
+});
+
+
+
+app.post('/api/users/change-password', (req, res) => {
+    const { username, oldPassword, newPassword } = req.body;
+
+    if (!username || !oldPassword || !newPassword) {
+        return res.status(400).json({ message: 'Benutzername, altes Passwort und neues Passwort sind erforderlich!' });
+    }
+
+    const query = 'SELECT * FROM users WHERE username = ? AND password = ?';
+    db.get(query, [username, oldPassword], (err, row) => {
+        if (err) {
+            console.error('Fehler beim Abrufen des Nutzers:', err.message);
+            return res.status(500).json({ message: 'Interner Serverfehler' });
+        }
+
+        if (!row) {
+            return res.status(401).json({ message: 'Altes Passwort ist falsch!' });
+        }
+
+        const insertHistoryQuery = `
+            INSERT INTO password_history (user_id, old_password)
+            VALUES (?, ?)
+        `;
+        db.run(insertHistoryQuery, [row.id, oldPassword], (err) => {
+            if (err) {
+                console.error('Fehler beim Speichern der Passwort-Historie:', err.message);
+                return res.status(500).json({ message: 'Fehler beim Speichern der Passwort-Historie.' });
+            }
+
+            const updateQuery = 'UPDATE users SET password = ? WHERE username = ?';
+            db.run(updateQuery, [newPassword, username], function (err) {
+                if (err) {
+                    console.error('Fehler beim Ändern des Passworts:', err.message);
+                    return res.status(500).json({ message: 'Fehler beim Ändern des Passworts.' });
+                }
+
+                res.status(200).json({ message: 'Passwort erfolgreich geändert!' });
+            });
+        });
+    });
+});
+
+
+
+
 
 // ** Login-Endpunkt mit SQLite **
 app.post('/api/login', (req, res) => {
