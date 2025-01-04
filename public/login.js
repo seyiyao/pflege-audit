@@ -4,9 +4,10 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
     const errorMessage = document.getElementById('error-message');
+    const BASE_URL = 'https://pflege-audit.onrender.com';
 
     try {
-        const response = await fetch('http://192.168.178.64:3000/api/login', {
+        const response = await fetch(`${BASE_URL}/api/login`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username, password })
@@ -17,9 +18,9 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
             localStorage.setItem('role', data.role); // Speichere die Rolle
             localStorage.setItem('username', username); // Speichere den Benutzernamen
             if (data.role === 'admin') {
-                window.location.href = '/admin.html'; // Weiterleitung für Admin
+                window.location.href = `${BASE_URL}/admin.html`; // Für Admin // Weiterleitung für Admin
             } else if (data.role === 'user') {
-                window.location.href = '/bereich.html'; // Weiterleitung zur Wohnbereichsauswahl
+                window.location.href = `${BASE_URL}/bereich.html`; // Für User // Weiterleitung zur Wohnbereichsauswahl
             }
         } else {
             const errorData = await response.json();

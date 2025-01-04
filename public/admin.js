@@ -1,11 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     const reportList = document.getElementById('report-list');
     const exportAllButton = document.getElementById('export-all');
+    const BASE_URL = 'https://pflege-audit.onrender.com';
+
 
     // Berichte laden und anzeigen
     async function loadReports() {
         try {
-            const response = await fetch('/api/reports');
+            const response = await fetch(`${BASE_URL}/api/reports`);
             if (!response.ok) throw new Error('Fehler beim Abrufen der Berichte.');
             const reports = await response.json();
 
@@ -38,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!confirmation) return;
 
         try {
-            const response = await fetch(`/api/reports/${id}`, { method: 'DELETE' });
+            const response = await fetch(`${BASE_URL}/api/reports/${id}`, { method: 'DELETE' });
             if (response.ok) {
                 alert('Bericht erfolgreich gelöscht');
                 loadReports();
@@ -375,7 +377,7 @@ exportAllPDFButton.addEventListener('click', async () => {
         localStorage.removeItem('role');
         localStorage.removeItem('username');
         localStorage.removeItem('wohnBereich');
-        window.location.href = '/login.html';
+        window.location.href = `${BASE_URL}/login.html`;
     });
 
     loadReports();

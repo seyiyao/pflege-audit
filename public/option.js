@@ -8,12 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const username = document.getElementById('username').value; // Benutzername abrufen
             const password = document.getElementById('password').value; // Passwort abrufen
             const errorMessage = document.getElementById('error-message'); // Fehlermeldung anzeigen
+            const BASE_URL = 'https://pflege-audit.onrender.com';
 
             errorMessage.style.display = 'none'; // Fehlerfeld initial ausblenden
 
             try {
                 // Anfrage an den `/api/login`-Endpunkt senden
-                const response = await fetch('/api/login', {
+                const response = await fetch(`${BASE_URL}/api/login`, {
+
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json', // JSON-Content-Typ
@@ -31,9 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     // Weiterleitung basierend auf der Rolle
                     if (data.role === 'admin') {
-                        window.location.href = '/admin.html';
+                        window.location.href = `${BASE_URL}/admin.html`;
                     } else if (data.role === 'user') {
-                        window.location.href = '/bereich.html';
+                        window.location.href = `${BASE_URL}/bereich.html`;
                     } else {
                         console.error('Unbekannte Rolle:', data.role);
                     }
@@ -57,7 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('popstate', () => {
         alert('Zurücknavigation ist nicht erlaubt!');
-        window.location.href = '/login.html'; // Weiterleitung zur sicheren Seite
+        window.location.href = `${BASE_URL}/login.html`;
+ // Weiterleitung zur sicheren Seite
     });
     
     // Option-Buttons
